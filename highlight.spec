@@ -68,3 +68,10 @@ rm -rf %{buildroot}
 %{_datadir}/applications/highlight.desktop
 %{_datadir}/pixmaps/highlight.xpm
 
+
+
+%changelog
+* Wed Dec 07 2011 Andrey Bondrov <abondrov@mandriva.org> 3.6-1mdv2011.0
++ Revision: 738601
+- imported package highlight
+
