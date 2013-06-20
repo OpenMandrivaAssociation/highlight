@@ -6,6 +6,7 @@ Group:		Development/Other
 License:	GPLv3
 Url:		http://www.andre-simon.de/
 Source0:	http://www.andre-simon.de/zip/%{name}-%{version}.tar.bz2
+Source100:	highlight.rpmlintrc
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	boost-devel
@@ -31,7 +32,6 @@ A Qt-based GUI for the highlight source code formatter source.
 %setup -q
 
 %build
-export CXXFLAGS="$CXXFLAGS -O2 -g"
 %make
 rm -rf src/gui-qt/moc*
 %make gui
