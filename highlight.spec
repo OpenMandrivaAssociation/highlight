@@ -1,5 +1,5 @@
-Name:		highlight
 Summary:	Universal source code to formatted text converter
+Name:		highlight
 Version:	3.6
 Release:	1
 Group:		Development/Other
@@ -31,6 +31,7 @@ A Qt-based GUI for the highlight source code formatter source.
 %setup -q
 
 %build
+export CXXFLAGS="$CXXFLAGS -O2 -g"
 %make
 rm -rf src/gui-qt/moc*
 %make gui
