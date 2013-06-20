@@ -1,16 +1,16 @@
 Name:		highlight
 Summary:	Universal source code to formatted text converter
 Version:	3.6
-Release:	%mkrel 1
+Release:	1
 Group:		Development/Other
 License:	GPLv3
-URL:		http://www.andre-simon.de/
+Url:		http://www.andre-simon.de/
 Source0:	http://www.andre-simon.de/zip/%{name}-%{version}.tar.bz2
-BuildRequires:	qt4-devel
-BuildRequires:	lua-devel
-BuildRequires:	boost-devel
+
 BuildRequires:	desktop-file-utils
-Buildroot:	%{_tmppath}/%{name}-%{version}-root
+BuildRequires:	boost-devel
+BuildRequires:	qt4-devel
+BuildRequires:	pkgconfig(lua)
 
 %description
 A utility that converts sourcecode to HTML, XHTML, RTF, LaTeX, TeX,
@@ -32,30 +32,24 @@ A Qt-based GUI for the highlight source code formatter source.
 
 %build
 %make
-%__rm -rf src/gui-qt/moc*
+rm -rf src/gui-qt/moc*
 %make gui
 
-
 %install
-%__rm -rf %{buildroot}
 %makeinstall_std
 
-%__mkdir_p %{buildroot}%{_datadir}/applications
-%__mkdir_p %{buildroot}%{_datadir}/pixmaps
+mkdir -p %{buildroot}%{_datadir}/applications
+mkdir -p %{buildroot}%{_datadir}/pixmaps
 
 %make install-gui DESTDIR=%{buildroot}
 
-%__rm -rf %{buildroot}%{_docdir}/%{name}/
+rm -rf %{buildroot}%{_docdir}/%{name}/
 
 desktop-file-install \
-    --dir %{buildroot}%{_datadir}/applications \
-   highlight.desktop
-
-%clean
-rm -rf %{buildroot}
+	--dir %{buildroot}%{_datadir}/applications \
+	highlight.desktop
 
 %files
-%defattr(-,root,root,-)
 %doc ChangeLog AUTHORS README* TODO examples/
 %{_bindir}/highlight
 %{_datadir}/highlight/
@@ -63,15 +57,7 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/highlight/
 
 %files gui
-%defattr(-,root,root,-)
 %{_bindir}/highlight-gui
 %{_datadir}/applications/highlight.desktop
 %{_datadir}/pixmaps/highlight.xpm
-
-
-
-%changelog
-* Wed Dec 07 2011 Andrey Bondrov <abondrov@mandriva.org> 3.6-1mdv2011.0
-+ Revision: 738601
-- imported package highlight
 
