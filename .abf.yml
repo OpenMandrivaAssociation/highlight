@@ -1,2 +1,4 @@
+removed_sources:
+  highlight-3.6.tar.bz2: ff3d5f5d17edfed4881d34ef847e63bf800a33e2
 sources:
-  "highlight-3.6.tar.bz2": ff3d5f5d17edfed4881d34ef847e63bf800a33e2
+  highlight-3.17.tar.bz2: 9806a7ceeb99ff562151c1ccfd20739f8c878c72
