@@ -34,7 +34,7 @@ A Qt-based GUI for the highlight source code formatter source.
 %build
 %make
 rm -rf src/gui-qt/moc*
-%make gui
+%make gui QMAKE=qmake
 
 %install
 %makeinstall_std
@@ -42,7 +42,7 @@ rm -rf src/gui-qt/moc*
 mkdir -p %{buildroot}%{_datadir}/applications
 mkdir -p %{buildroot}%{_datadir}/pixmaps
 
-%make install-gui DESTDIR=%{buildroot}
+%make install-gui DESTDIR=%{buildroot} 
 
 rm -rf %{buildroot}%{_docdir}/%{name}/
 
