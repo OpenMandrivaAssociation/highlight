@@ -1,7 +1,7 @@
 Summary:	Universal source code to formatted text converter
 Name:		highlight
-Version:	3.17
-Release:	3
+Version:	3.18
+Release:	1
 Group:		Development/Other
 License:	GPLv3
 Url:		http://www.andre-simon.de/
@@ -61,4 +61,3 @@ desktop-file-install \
 %{_bindir}/highlight-gui
 %{_datadir}/applications/highlight.desktop
 %{_datadir}/pixmaps/highlight.xpm
-
