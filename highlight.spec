@@ -32,7 +32,7 @@ A Qt-based GUI for the highlight source code formatter source.
 %setup -q
 
 %build
-%make
+%make CXX=%{__cxx}
 rm -rf src/gui-qt/moc*
 %make gui QMAKE=qmake
 
