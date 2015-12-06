@@ -1,5 +1,6 @@
 removed_sources:
   highlight-3.17.tar.bz2: 9806a7ceeb99ff562151c1ccfd20739f8c878c72
+  highlight-3.18.tar.bz2: 985d0a3c707e3251fe50ffff66e11a8563777202
   highlight-3.6.tar.bz2: ff3d5f5d17edfed4881d34ef847e63bf800a33e2
 sources:
-  highlight-3.18.tar.bz2: 985d0a3c707e3251fe50ffff66e11a8563777202
+  highlight-3.24.tar.bz2: 2a0692e9fb3717337bc8de22dd091dff15741b7e
