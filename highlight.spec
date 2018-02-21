@@ -1,6 +1,6 @@
 Summary:	Universal source code to formatted text converter
 Name:		highlight
-Version:	3.24
+Version:	3.42
 Release:	1
 Group:		Development/Other
 License:	GPLv3
@@ -10,7 +10,8 @@ Source100:	highlight.rpmlintrc
 
 BuildRequires:	desktop-file-utils
 BuildRequires:	boost-devel
-BuildRequires:	qt4-devel
+BuildRequires:	cmake(ECM)
+BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(lua)
 
 %description
@@ -34,7 +35,7 @@ A Qt-based GUI for the highlight source code formatter source.
 %build
 %make CXX=%{__cxx}
 rm -rf src/gui-qt/moc*
-%make gui QMAKE=qmake
+%make gui QMAKE=%{_qt5_bindir}/qmake
 
 %install
 %makeinstall_std
@@ -51,7 +52,7 @@ desktop-file-install \
 	highlight.desktop
 
 %files
-%doc ChangeLog AUTHORS README* TODO examples/
+%doc ChangeLog AUTHORS README* TODO 
 %{_bindir}/highlight
 %{_datadir}/highlight/
 %{_mandir}/man1/highlight.1*
