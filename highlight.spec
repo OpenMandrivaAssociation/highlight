@@ -62,4 +62,4 @@ desktop-file-install \
 %files gui
 %{_bindir}/highlight-gui
 %{_datadir}/applications/highlight.desktop
-%{_datadir}/pixmaps/highlight.xpm
+#{_datadir}/pixmaps/highlight.xpm
