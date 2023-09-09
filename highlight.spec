@@ -38,7 +38,7 @@ rm -rf src/gui-qt/moc*
 %make gui QMAKE=%{_qt5_bindir}/qmake
 
 %install
-%makeinstall_std
+%make_install
 
 mkdir -p %{buildroot}%{_datadir}/applications
 mkdir -p %{buildroot}%{_datadir}/pixmaps
@@ -55,6 +55,9 @@ desktop-file-install \
 %doc AUTHORS README* 
 %{_bindir}/highlight
 %{_datadir}/highlight/
+%{_datadir}/zsh/site-functions/_highlight
+%{_datadir}/fish/vendor_completions.d/highlight.fish
+%{_datadir}/bash-completion/completions/highlight
 %{_mandir}/man1/highlight.1*
 %{_mandir}/man5/filetypes.conf.5.*
 %config(noreplace) %{_sysconfdir}/highlight/
@@ -62,4 +65,4 @@ desktop-file-install \
 %files gui
 %{_bindir}/highlight-gui
 %{_datadir}/applications/highlight.desktop
-#{_datadir}/pixmaps/highlight.xpm
+%{_iconsdir}/hicolor/*x*/apps/highlight.png
