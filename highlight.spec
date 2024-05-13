@@ -1,11 +1,11 @@
 Summary:	Universal source code to formatted text converter
 Name:		highlight
-Version:	4.10
+Version:	4.11
 Release:	1
 Group:		Development/Other
 License:	GPLv3
-Url:		http://www.andre-simon.de/
-Source0:	http://www.andre-simon.de/zip/%{name}-%{version}.tar.bz2
+Url:		http://www.andre-simon.de/doku/highlight/highlight.html
+Source0		http://andre-simon.de/zip/highlight-%{version}.tar.bz2
 Source100:	highlight.rpmlintrc
 
 BuildRequires:	desktop-file-utils
@@ -30,7 +30,7 @@ Requires:	%{name} = %{version}-%{release}
 A Qt-based GUI for the highlight source code formatter source.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %make CXX=%{__cxx}
