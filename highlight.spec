@@ -8,6 +8,7 @@ Url:		http://www.andre-simon.de/doku/highlight/highlight.html
 Source0:	http://andre-simon.de/zip/highlight-%{version}.tar.bz2
 Source100:	highlight.rpmlintrc
 
+BuildRequires:	make
 BuildRequires:	desktop-file-utils
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
