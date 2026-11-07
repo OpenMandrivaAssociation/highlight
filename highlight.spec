@@ -1,6 +1,6 @@
 Summary:	Universal source code to formatted text converter
 Name:		highlight
-Version:	4.21
+Version:	4.22
 Release:	1
 Group:		Development/Other
 License:	GPLv3
